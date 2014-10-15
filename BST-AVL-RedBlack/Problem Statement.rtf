@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww25400\viewh13140\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+CS 6301.\{013,016\}: Implementation of advanced DS&A\
+\
+Initial code base: any standard implementation of binary search trees\
+and its variants (BST, AVL, Red-Black, Splay, B trees, etc.), Skip lists.\
+Download code available from the internet (and cite the sources in\
+your report), and modify code as needed.\
+\
+Assume that keys and values are long integers.\
+\
+   The dictionary ADT is defined on a set of (key,value) pairs, where the\
+   keys are totally ordered.  The following operations are defined:\
+\
+   a. Insert(k,v): insert a new entry with key k, value v.  If a key with\
+                   key k already exists, its value is replaced by v.\
+		   Insert returns 1 if key k is new, and 0 if it\
+                   already existsed in the dictionary.\
+\
+   b. Find(k): return the value associated with key k.  If there is\
+               no element with key k, it returns 0.\
+\
+   c. Min(): return the current smallest key\
+\
+   d. Max(): return the current largest key\
+\
+   e. Delete(k): remove element with key k.  Returns value of deleted\
+                 element (0 if such a key does not exist).\
+\
+   g. Size(): return the number of elements currently stored.\
+\
+Part a:\
+-------\
+Empirically evaluate the performance of 3 or more data structures on\
+the above operations (e.g., BST, AVL, RB).  Sample input files will be\
+provided with millions of operations.  Compare the running times on\
+each input file.\
+\
+Input specification:\
+Programs read input from stdin and print output to stdout.  Keys and\
+values are long integers.  Initially the dictionary is empty.  The\
+input contains a sequence of lines.  Each line contains one operation\
+followed by parameters needed for that operation, separated by spaces.\
+\
+Output specification:\
+The output is a number, which is the sum of the return values of the\
+operations (mod 997), followed by the time taken, in milliseconds.\
+\
+\
+Sample input (number after # gives the return value of that operation):\
+Insert 22 4752	   # 1\
+Insert 12 9601	   # 1\
+Insert 37 4738	   # 1\
+Insert 22 5400	   # 0\
+Min	  	   # 12\
+Max		   # 37\
+Find 9601	   # 0\
+Find 12		   # 9601\
+Size 		   # 3\
+Delete 22	   # 5400\
+\
+Sample output:\
+101 2\
+\
+[Explanation: Sum of returned values of all the operations is 15056.\
+	      Applying mod 997, we get 101.  RT = 2 msec.]\
+}

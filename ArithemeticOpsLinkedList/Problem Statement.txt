@@ -1,0 +1,94 @@
+CS 6301.{013,016}: Implementation of advanced DS&A
+
+Initial code base: any standard implementation of linked lists, without
+any special operations to aid this project.
+
+In this project, develop a program that implements arithmetic with
+large integers, of arbitrary size.  Negative numbers are not handled.
+You must use the following data structure for representing the numbers:
+
+Linked list of integers.  Each node of the list stores exactly one integer.  
+For example, the number 4628 will be represented by the linked list: 8 --> 2 --> 6 --> 4. 
+You can use linked list library of Java, or find code for Linked lists on the
+internet.  Cite the sources in your report.
+
+Implement the following methods:
+1. StrToNum: Takes a string as parameter, that stores a number in decimal,
+   and returns the list corresponding that number.  The string can have
+   arbitrary length.  For example, StrToNum("4628") will return the list
+   above.
+
+2. NumToStr: Takes a linked list as parameter and returns the number that
+   it represents as a string (in decimal).  There should be no leading
+   zeroes in the string. 
+
+3. Add: Takes two lists as parameters and returns the list corresponding
+   to the sum of the two numbers represented by those lists.
+
+4. Subtract: given two lists L1 and L2 as parameter, representing the
+   numbers n1 and n2 repectively, returns the list corresponding to n1-n2.
+   If the result is negative, store 0, instead.
+
+5. Multiply: implements product of two numbers, given as lists.
+
+6. Power: given two lists L1 and L2 as parameter, representing the
+   numbers n1 and n2 repectively, returns the list corresponding to n1^n2
+   (n1 to the power n2).  Assume that n2 is a nonnegative number.
+
+Write a driver program that illustrates the methods, based on the following
+input/output specification:
+
+Input/Output specification:
+The program takes input from stdin.  The input is a sequence of lines.
+Each line has the line number as its first element (numbered 1,2,...).
+The input uses names of variables, which are always single letters (a,b,...).
+Each line has one of the following formats (after the line number).
+There are no unnecessary spaces in the input.  The input has at most 1000 lines.
+You may assume that the input has no errors.
+[Comments starting with # are not part of the specification):
+
+var=NumberInDecimal	# sets x to be that number
+var=var+var		# add two numbers and assign to var on left
+var=var*var		# product of two numbers
+var=var-var		# difference of two numbers
+var=var^var		# power
+var			# print the value of the variable to stdout
+var?LineNumber		# if var value is not 0, then go to Line number
+
+
+Sample input:
+1 x=999
+2 y=8
+3 z=x+y
+4 z
+5 a=x^y
+6 a
+
+Its output is shown below.  Only lines 4 and 6 produce output.
+1007
+992027944069944027992001
+
+Sample input 2:
+1 x=10
+2 p=1
+3 n=1
+4 p=p*x
+5 x=x-n
+6 x?4
+7 p
+
+The above input calculates 10! by looping between lines 4 and 6, until x
+becomes zero.  Its output is shown below:
+3628800
+
+Sample input 3:
+1 a=90569784495866770974195656280275310090138980613960953881501965823101
+2 b=75040970647524038461398929683905540248523961720824412136973299943953
+3 c=a-b
+4 c
+5 c=b-a
+6 c
+
+Its output is:
+15528813848342732512796726596369769841615018893136541744528665879148
+0

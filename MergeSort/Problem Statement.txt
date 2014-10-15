@@ -1,0 +1,9 @@
+CS 6301.{013,016}: Implementation of advanced DS&A
+
+Compare running times for the following values of n: 8192, 65536, 1048576, 8388608. 
+
+	1	Allocate dynamic memory for L and R within Merge.
+	2	Create a single auxiliary array B in main and pass it to MergeSort and Merge. In each instance of Merge, data is copied from A to B and merged back into A.
+	3	Create a single auxiliary array B in main and pass it to MergeSort and Merge. Data alternates between A and B. Extra credit for code that works correctly for all values of n (not just powers of 2).
+Specification: Program takes one integer on the command line (n), creates an array of that size and populates it with numbers in reverse sorted order. It sorts the array using merge sort and verifies whether the array is in sorted order. It prints just one line of output indicating whether the algorithm succeeded in sorting the array.
+Upload your code on elearning, along with a report that gives the running times (in msec) of the 3 algorithms for the 4 different values of n (in tabular form). Explain if your code is eligible for extra credit and how you implemented it to run for all values of n.

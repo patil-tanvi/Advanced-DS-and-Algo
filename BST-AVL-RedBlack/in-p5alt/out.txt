@@ -1,0 +1,9 @@
+5k.txt:  600
+c1.txt:  159
+c2.txt:  112
+k1.txt:  867
+k2.txt:  800
+l1.txt:  471
+l2.txt:  983
+m1.txt:  171
+m2.txt:  758
